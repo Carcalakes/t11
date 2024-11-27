@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LCN - Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="https://static.wikia.nocookie.net/gtawiki/images/0/0f/LCN-Logo.png/revision/latest/scale-to-width-down/1000?cb=20131126175224" alt="LCN Logo">
+            </div>
+            <div class="market-info">
+                <p class="market-name">Liberty City National Exchange</p>
+                <p class="market-status">Live</p>
+            </div>
+        </header>
+
+        <div class="user-info">
+            <h2>Welcome, <span id="username-placeholder">User</span></h2>
+        </div>
+
+        <div class="stock-market">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Stock</th>
+                        <th>Price</th>
+                        <th>Change</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ben & Sons</td>
+                        <td>$120.00</td>
+                        <td>+3%</td>
+                        <td><button>Buy</button></td>
+                    </tr>
+                    <tr>
+                        <td>Horizon Technologies</td>
+                        <td>$250.00</td>
+                        <td>-1.2%</td>
+                        <td><button>Buy</button></td>
+                    </tr>
+                    <tr>
+                        <td>East Coast Energy</td>
+                        <td>$200.00</td>
+                        <td>+0.5%</td>
+                        <td><button>Buy</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        // Get username from localStorage and display it
+        const username = localStorage.getItem('username');
+        if (username) {
+            document.getElementById('username-placeholder').innerText = username;
+        } else {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>
